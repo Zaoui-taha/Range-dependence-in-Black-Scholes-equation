@@ -7,7 +7,7 @@
 **Authors:** Taha Zaoui and Sanjukta Das  
 **Status:** Internship research report (not peer-reviewed)
 
-> **[Read the full research report]([Final_report/improvising_time_dependent_black_scholes_equation.pdf](https://github.com/Zaoui-taha/Range-dependence-in-Black-Scholes-equation/blob/41917996c30948e9bb6b3209c198d704d6c89795/Final%20report/improvising%20time%20dependent%20black%20scholes%20equation.pdf))** — includes the mathematical derivations, numerical experiments, references, and MATLAB code in the appendix.
+> **[Read the full research report]([Final report])** — includes the mathematical derivations, numerical experiments, references, and MATLAB code in the appendix.
 
 ## Overview
 
