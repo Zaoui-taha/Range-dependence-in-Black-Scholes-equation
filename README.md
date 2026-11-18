@@ -1,4 +1,4 @@
-# Fractional Black–Scholes Model for European Option Pricing
+# Improvising time-dependent Black-Scholes equation for option values with fractional Brownian motion and numerical resolution
 
 **Mathematical derivation and numerical approximation using fractional Brownian motion, PDEs, and Monte Carlo methods**
 
@@ -7,7 +7,7 @@
 **Authors:** Taha Zaoui and Sanjukta Das  
 **Status:** Internship research report (not peer-reviewed)
 
-> **[Read the full research report](report/Research_Report.pdf)** — includes the mathematical derivations, numerical experiments, references, and MATLAB code in the appendix.
+> **[Read the full research report]()** — includes the mathematical derivations, numerical experiments, references, and MATLAB code in the appendix.
 
 ## Overview
 
