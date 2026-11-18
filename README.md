@@ -135,7 +135,3 @@ The appendix of the report documents routines for:
 **Taha Zaoui and Sanjukta Das** (2025). *Improvising Time-Independent Black-Scholes Equation for Option Values with Fractional Brownian Motion and Numerical Resolution.* Internship research report, Department of Mathematics, Mahindra University, Hyderabad, India. **Not peer-reviewed.**
 
 The full report contains the derivations, discussion, figures, bibliography, and original MATLAB-code appendix.
-
-## License and reuse
-
-No reuse license is asserted here. Before selecting a license or making the report and code public, confirm any applicable permissions and institutional or coauthor requirements.
