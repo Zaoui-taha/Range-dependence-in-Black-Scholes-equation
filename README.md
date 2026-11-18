@@ -11,14 +11,14 @@
 
 ## Overview
 
-The classical Black–Scholes model assumes that the underlying asset follows a geometric Brownian motion. This research investigates a fractional Brownian motion (fBm) extension, in which the **Hurst exponent** \(H\) controls the temporal dependence of the stochastic process.
+The classical Black–Scholes model assumes that the underlying asset follows a geometric Brownian motion. This research investigates a fractional Brownian motion (fBm) extension, in which the **Hurst exponent** $H$ controls the temporal dependence of the stochastic process.
 
 The project derives a generalized Black–Scholes-type equation for **European call and put options**, then studies two numerical approaches:
 
 1. **PDE-based numerical solution** in MATLAB using `pdepe`, following a time-reversal and change-of-variables formulation.
 2. **Stochastic numerical solution** based on a forward-backward SDE representation, Euler–Maruyama discretization, and **Least-Squares Monte Carlo (LSMC)** regression.
 
-Numerical option values are compared against the analytical expressions presented in the report to examine approximation error and sensitivity to \(H\).
+Numerical option values are compared against the analytical expressions presented in the report to examine approximation error and sensitivity to $H$.
 
 ## Research objectives
 
@@ -33,12 +33,12 @@ Numerical option values are compared against the analytical expressions presente
 The stock-price model considered in the report is
 
 $$
-S_t=S_0\exp\!\left(\mu t-\frac{\sigma^2}{2}t^{2H}+\sigma W_t^H\right),
+S_t=S_0 \exp\left(\mu t-\frac{\sigma^2}{2}t^{2H} + \sigma W_t^H \right),
 $$
 
-where \(W_t^H\) is fractional Brownian motion, \(\mu\) is the drift, \(\sigma\) is the volatility, and \(H\in(0,1)\) is the Hurst exponent. At \(H=1/2\), fBm reduces to standard Brownian motion; values below and above \(1/2\) correspond to negatively and positively correlated increments, respectively.
+where $W_t^H$ is fractional Brownian motion, $\mu$ is the drift, $\sigma$ is the volatility, and $H \in (0,1)$ is the Hurst exponent. At $H = 0.5$, fBm reduces to standard Brownian motion; values below and above $0.5$ correspond to negatively and positively correlated increments, respectively.
 
-Using a transformed option-price function \(\widetilde V(t,x)\), the report derives the generalized pricing equation
+Using a transformed option-price function $\widetilde V(t,x)$, the report derives the generalized pricing equation
 
 $$
 \frac{\partial\widetilde V}{\partial t}
@@ -65,7 +65,7 @@ with terminal conditions corresponding to European call or put payoffs. See **Se
 - Uses the Feynman–Kac/FBSDE formulation developed in the report.
 - Simulates forward paths with an Euler–Maruyama discretization.
 - Estimates conditional expectations by least-squares regression on a polynomial basis.
-- Works within the **\(H\geq 0.5\)** setting considered in Section 8 of the report.
+- Works within the **$H \geq 0.5$** setting considered in Section 8 of the report.
 - Compares the LSMC-based option valuations with the PDE-based solution.
 
 **Report:** Section 8; Figures 7–10; Table 5.
@@ -74,7 +74,7 @@ with terminal conditions corresponding to European call or put payoffs. See **Se
 
 The report presents numerical comparisons for both European calls and puts, including the following *reported relative errors*:
 
-| Method | Option | Hurst exponent \(H\) | Reported relative error |
+| Method | Option | Hurst exponent $H$ | Reported relative error |
 |---|---|---:|---:|
 | PDE | Call | 0.8 | 0.0986% |
 | PDE | Call | 0.3 | 28.0802% |
@@ -83,7 +83,7 @@ The report presents numerical comparisons for both European calls and puts, incl
 | LSMC | Put | 0.9 | 0.1220% |
 | LSMC | Put | 0.5 | 0.5153% |
 
-*These numbers are transcribed from Tables 2, 3, and 5 of the internship report; they are not independent reproductions.* Results depend on the method and on \(H\). The report notes increased numerical difficulties near \(t=0\), particularly when \(H<0.5\), because of the behavior of the time-dependent coefficients. The stronger errors in some regimes are important limitations rather than results to omit.
+*These numbers are transcribed from Tables 2, 3, and 5 of the internship report; they are not independent reproductions.* Results depend on the method and on $H$. The report notes increased numerical difficulties near $t=0$, particularly when $H < 0.5$, because of the behavior of the time-dependent coefficients. The stronger errors in some regimes are important limitations rather than results to omit.
 
 ## MATLAB implementation
 
@@ -122,8 +122,8 @@ The appendix of the report documents routines for:
 ## Scope and limitations
 
 - The report studies a **specific fractional Black–Scholes modeling framework** under its stated assumptions; its derivations and comparisons should not be interpreted as a general no-arbitrage validation of fBm-based financial markets.
-- The LSMC formulation is investigated for \(H\geq 0.5\) in the report.
-- Accuracy varies with the Hurst exponent and discretization choices, with numerical sensitivity near \(t=0\) noted in the report.
+- The LSMC formulation is investigated for $H \geq 0.5$ in the report.
+- Accuracy varies with the Hurst exponent and discretization choices, with numerical sensitivity near $t=0$ noted in the report.
 - The work is a **research internship report, not a peer-reviewed publication**.
 
 ## Research skills demonstrated
