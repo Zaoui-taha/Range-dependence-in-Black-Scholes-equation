@@ -7,7 +7,7 @@
 **Authors:** Taha Zaoui and Sanjukta Das  
 **Status:** Internship research report (not peer-reviewed)
 
-> **[Read the full research report]()** — includes the mathematical derivations, numerical experiments, references, and MATLAB code in the appendix.
+> **[Read the full research report]([Final report])** — includes the mathematical derivations, numerical experiments, references, and MATLAB code in the appendix.
 
 ## Overview
 
